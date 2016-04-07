@@ -6,9 +6,7 @@ class Stack
   end
   
   def pop
-    last = @store.last
     @store.pop
-    return last
   end
   
   def push(element)

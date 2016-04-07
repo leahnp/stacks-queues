@@ -16,7 +16,7 @@ class CrappyJob
       @waiting.enqueue(n)
     end
     # test
-    puts "First wait list #{waiting.store}"
+    # puts "First wait list #{waiting.store}"
   end
 
   # method to hire the first 6 people who entered wait_list queue
@@ -46,7 +46,7 @@ class CrappyJob
   end
 end
 
-# make crappy job instance
+# make crappy job instance (aka crappy company)
 company = CrappyJob.new 
 # add 10 people to the wait list queue
 company.wait_list(10)
@@ -55,5 +55,8 @@ company.hire(6)
 # fire random amount of people from workers
 company.fire
 
+
+# questions - new people never go on the hire list? 
+# this must eventually break because rand is sending different numbers to/from workers/waiting
 
 
