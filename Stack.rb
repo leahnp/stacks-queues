@@ -1,13 +1,14 @@
 class Stack
+  attr_reader :store
+
   def initialize
     @store = Array.new
   end
   
   def pop
-    element = @store[-1]
-    @store.delete_at(-1)
-
-    # @store.pop
+    last = @store.last
+    @store.pop
+    return last
   end
   
   def push(element)
